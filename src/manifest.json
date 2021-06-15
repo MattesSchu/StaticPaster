@@ -1,0 +1,36 @@
+{
+  "name": "attenio Support Helper",
+  "description": "Predefined Textblocks for faster resonses",
+  "version": "1.0",
+  "manifest_version": 3,
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/attenio_logo_16.png",
+      "32": "/images/attenio_logo_32.png",
+      "48": "/images/attenio_logo_48.png",
+      "128": "/images/attenio_logo_128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/attenio_logo_16.png",
+    "32": "/images/attenio_logo_32.png",
+    "48": "/images/attenio_logo_48.png",
+    "128": "/images/attenio_logo_128.png"
+  },
+  "commands": {
+    "foo-command": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle feature foo"
+    }
+  }
+}
