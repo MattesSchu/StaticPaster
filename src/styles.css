@@ -3,18 +3,21 @@
   --textarea-padding: 2px;
   --textarea-border-width: 1px;
   --textarea-height: 50px;
-  --entry-height: calc(var(--textarea-height) + var(--textarea-margin) + var(--textarea-padding) + var(--textarea-border-width));
-}
+  --textarea-width: 700px;
+  --entry-height: calc(
+    var(--textarea-height) + var(--textarea-margin) + var(--textarea-padding) +
+      var(--textarea-border-width)
+  );
 
-button {
-  outline: none;
-  margin: 10px;
-  border: none;
-  border-radius: 2px;
+  --button-width: 48px;
 }
 
 body {
-  width: 700px;
+  width: calc(
+    var(--textarea-width) + var(--button-width) +
+      calc(4 * var(--textarea-margin)) + calc(2 * var(--textarea-padding)) +
+      calc(2 * var(--textarea-border-width))
+  );
 }
 
 .list-entry:after {
@@ -30,15 +33,26 @@ body {
   padding: 0px;
 }
 
+#button-footer {
+  width: calc(100% - calc(2 * var(--textarea-border-width)));
+}
+
+#add-new-element {
+  margin: var(--textarea-margin);
+}
+
 .delete-button {
-  height: calc(var(--textarea-height) + (var(--textarea-padding)*2) + (var(--textarea-border-width)*2));
-  width: calc(var(--textarea-height) + var(--textarea-padding) + var(--textarea-border-width));
+  width: var(--button-width);
+  height: calc(
+    var(--textarea-height) + (var(--textarea-padding) * 2) +
+      (var(--textarea-border-width) * 2)
+  );
   margin: var(--textarea-margin);
   float: left;
 }
 
 .options-textarea {
-  width: calc(((700px - 20px)  * 0.90) - 5px);
+  width: var(--textarea-width);
   height: var(--textarea-height);
   margin: var(--textarea-margin);
   padding: var(--textarea-padding);
@@ -48,17 +62,28 @@ body {
 }
 
 .popup-text {
-  text-overflow: ellipsis;
-  width: calc(((700px - 20px)  * 0.90) - 5px);
-  height: var(--textarea-height);
+  width: calc(var(--textarea-width) - 10px);
+  height: var(--button-width);
   margin: var(--textarea-margin);
   padding: var(--textarea-padding);
-  border-width: var(--textarea-border-width);  
+  /* Border */
+  border-width: var(--textarea-border-width);
+  border-style: solid;
+  border-radius: 2px;
+  /* misc */
+  text-overflow: ellipsis;
   float: left;
 }
 
 .copy-button {
-  width: 32px;
-  height: 32px;
+  width: calc(
+    var(--button-width) +
+      calc(2 * var(--textarea-padding) + calc(2 * var(--textarea-border-width)))
+  );
+  height: calc(
+    var(--button-width) + calc(2 * var(--textarea-padding)) +
+      calc(2 * var(--textarea-border-width))
+  );
+  margin: var(--textarea-margin);
   float: left;
 }

@@ -1,5 +1,5 @@
 let copyTextListContainer = document.getElementById("copy-text-list");
-const presetCopyText = "Fill my void!";
+const presetCopyText = "Enter Text here";
 
 /**
  * Create a uuidv4.
@@ -42,7 +42,9 @@ let visual = {
 
   removeListEntry: function (e) {
     let target = e.target;
-    let entry = target.parentElement.parentElement;
+    let entry = target.className === "fa fa-trash"
+      ? target.parentElement.parentElement.parentElement
+      : target.parentElement.parentElement;
     // Delete from Entry in visual list
     let idx = visual.visualList.map(function (el) { return el.uuid; }).indexOf(entry.id);
     visual.visualList.splice(idx, 1);
@@ -116,18 +118,6 @@ let visual = {
   initAddNewButton: function () {
     let button = document.getElementById("add-new-element");
     button.addEventListener("click", this.handleAddNewEntry);
-  },
-
-  removeElement: function (idx) {
-    if (idx < 0 || idx >= 10) return;
-  },
-
-  moveUp: function (element, list) {
-    // TODO
-  },
-
-  moveDown: function (element, list) {
-    // TODO
   },
 }
 
