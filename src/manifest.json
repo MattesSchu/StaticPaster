@@ -24,13 +24,13 @@
     "128": "/images/attenio_logo_128.png"
   },
   "commands": {
-    "foo-command": {
+    "openPopUp": {
       "suggested_key": {
-        "windows": "Ctrl+Shift+Y",
-        "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
+        "windows": "Ctrl+Shift+O",
+        "default": "Ctrl+Shift+O",
+        "mac": "Command+Shift+O"
       },
-      "description": "Toggle feature foo"
+      "description": "Open PopUp"
     }
   }
 }

@@ -3,7 +3,9 @@ let popup = {
 
   copyText: function (e) {
     let target = e.target;
-    let text = target.parentNode.previousElementSibling.textContent;
+    let text = target.className === "fa fa-clipboard"
+      ? target.parentElement.parentElement.previousElementSibling.textContent
+      : target.parentElement.previousElementSibling.textContent;
     text = text.replace(/(\r\n|\n|\r)/gm, "");
     text = text.replace(/\t/g, ' ');
     text = text.replace(/ +(?= )/g,'');
@@ -44,7 +46,6 @@ let popup = {
   initList: function () {
     chrome.storage.sync.get("copyTextList", (data) => {
       for (const element of data.copyTextList) {
-        console.log(element);
         popup.addListEntry(element);
       }
     });

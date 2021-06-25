@@ -101,7 +101,7 @@ let visual = {
 
   addNewEntry: function () {
     // check if limit of 10 elements was reached
-    if (this.visualList.length >= 10) {
+    if (this.visualList.length >= 9) {
       console.log("Unable to create more than 10 list entries.")
       return;
     }
