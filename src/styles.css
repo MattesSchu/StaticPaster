@@ -2,14 +2,14 @@
   --textarea-margin: 2px;
   --textarea-padding: 2px;
   --textarea-border-width: 1px;
-  --textarea-height: 50px;
+  --textarea-height: 3em;
   --textarea-width: 700px;
   --entry-height: calc(
     var(--textarea-height) + var(--textarea-margin) + var(--textarea-padding) +
       var(--textarea-border-width)
   );
 
-  --button-width: 48px;
+  --button-width: 3em;
 }
 
 body {
@@ -63,7 +63,7 @@ body {
 
 .popup-text {
   width: calc(var(--textarea-width) - 10px);
-  height: var(--button-width);
+  height: var(--textarea-height);
   margin: var(--textarea-margin);
   padding: var(--textarea-padding);
   /* Border */

@@ -1,27 +1,27 @@
 {
-  "name": "attenio Support Helper",
-  "description": "Predefined Textblocks for faster resonses",
-  "version": "1.0",
+  "name": "Matti Static Clipboard Helper",
+  "description": "Predefined Textblocks for faster pasting in Chrome",
+  "version": "0.0.2",
   "manifest_version": 3,
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/images/attenio_logo_16.png",
-      "32": "/images/attenio_logo_32.png",
-      "48": "/images/attenio_logo_48.png",
-      "128": "/images/attenio_logo_128.png"
+      "16": "/images/static-paster-logo_16.png",
+      "32": "/images/static-paster-logo_32.png",
+      "48": "/images/static-paster-logo_48.png",
+      "128": "/images/static-paster-logo_128.png"
     }
   },
   "icons": {
-    "16": "/images/attenio_logo_16.png",
-    "32": "/images/attenio_logo_32.png",
-    "48": "/images/attenio_logo_48.png",
-    "128": "/images/attenio_logo_128.png"
+    "16": "/images/static-paster-logo_16.png",
+    "32": "/images/static-paster-logo_32.png",
+    "48": "/images/static-paster-logo_48.png",
+    "128": "/images/static-paster-logo_128.png"
   },
   "commands": {
     "openPopUp": {
